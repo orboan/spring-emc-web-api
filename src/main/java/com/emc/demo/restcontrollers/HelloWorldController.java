@@ -1,4 +1,4 @@
-package com.emc.demo.controllers;
+package com.emc.demo.restcontrollers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,14 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("HelloWorld")
 public class HelloWorldController {
-	
-	static final Logger log = LoggerFactory.getLogger(HelloWorldController.class);
+
+	static final Logger log = LoggerFactory
+			.getLogger(HelloWorldController.class);
 
 	@GetMapping("/hello")
 	@CrossOrigin
 	public String helloWorld(
 			@RequestParam(value = "name", defaultValue = "World") String name) {
 		log.info("helloWorld method started");
-	    return "Hello " + name + "!!";	
+		return "Hello " + name + "!!";
 	}
 }

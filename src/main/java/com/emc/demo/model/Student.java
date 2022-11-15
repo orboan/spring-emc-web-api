@@ -14,7 +14,7 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idstudent;
-	
+
 	@Column
 	private String name;
 
@@ -55,5 +55,5 @@ public class Student {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 }
